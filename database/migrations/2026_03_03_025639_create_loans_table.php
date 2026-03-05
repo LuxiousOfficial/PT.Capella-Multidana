@@ -19,10 +19,10 @@ return new class extends Migration
             $table->decimal('pendapatan_bulanan_nasabah', 9,0);
             $table->decimal('nominal_pengajuan', 9,0);
             $table->integer('tenor');
-            $table->decimal('tagihan_nasabah', 9,0)->nullable();
+            $table->decimal('tagihan_nasabah', 9,0);
             $table->string('tanggal_pengajuan');
             $table->string('catatan');
-            $table->string('status')->nullable();
+            $table->enum('status', ['PENDING', 'APPROVE', 'REJECT']);
             $table->timestamps();
         });
     }

@@ -57,7 +57,7 @@
                   <td style="color: black;">Rp {{ number_format($loan->tagihan_nasabah) }}</td>
                   <td style="color: black;">{{ $loan->tanggal_pengajuan }}</td>
                   <td style="color: black;">{{ $loan->catatan }}</td>
-                  <td style="color: black; font-weight: bold;">{{ $loan->status ? $loan->status : 'PENDING'}}</td>
+                  <td style="color: black; font-weight: bold;">{{ $loan->status}}</td>
                   <td class="d-flex">
 
                     <a href="/user/loan/{{ $loan->id }}" class="btn btn-info px-3 fw-bold border-0">Details</a>

@@ -37,6 +37,7 @@ class LoanController extends Controller
             'pendapatan_bulanan_nasabah' => 'required|integer|min:999999',
             'nominal_pengajuan' => 'required|integer|max:201000000',
             'tenor' => 'required|integer|min:1|max:24',
+            'tagihan_nasabah' => 'nullable|integer|min:1',
             'tanggal_pengajuan' => 'required|string|max:50',
             'catatan' => 'required|string|max:255',
             'status' => 'nullable|string|max:30'
@@ -105,6 +106,7 @@ class LoanController extends Controller
             'pendapatan_bulanan_nasabah' => 'required|integer|min:999999',
             'nominal_pengajuan' => 'required|integer|max:201000000',
             'tenor' => 'required|integer|min:1|max:24',
+            'tagihan_nasabah' => 'nullable|integer|min:1',
             'tanggal_pengajuan' => 'required|string|max:50',
             'catatan' => 'required|string|max:255',
             'status' => 'nullable|string|max:30'
