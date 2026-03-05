@@ -35,7 +35,7 @@ class LoanController extends Controller
             'nama' => 'required|string|max:50,',
             'tipe_pengajuan' => 'required|string|max:80',
             'pendapatan_bulanan_nasabah' => 'required|integer|min:999999',
-            'nominal_pengajuan' => 'required|integer|max:200000000',
+            'nominal_pengajuan' => 'required|integer|max:201000000',
             'tenor' => 'required|integer|min:1|max:24',
             'tanggal_pengajuan' => 'required|string|max:50',
             'catatan' => 'required|string|max:255',
@@ -59,7 +59,7 @@ class LoanController extends Controller
 
         $nominalPengajuan = $request->nominal_pengajuan;
 
-        if($nominalPengajuan >= 200000000) 
+        if($nominalPengajuan >= 201000000) 
         {
             return back()->with('error', 'Nasabah hanya dapat meminjam maksimal 200 juta');
         }
@@ -103,7 +103,7 @@ class LoanController extends Controller
             'nama' => 'required|string|max:50,',
             'tipe_pengajuan' => 'required|string|max:80',
             'pendapatan_bulanan_nasabah' => 'required|integer|min:999999',
-            'nominal_pengajuan' => 'required|integer|max:200000000',
+            'nominal_pengajuan' => 'required|integer|max:201000000',
             'tenor' => 'required|integer|min:1|max:24',
             'tanggal_pengajuan' => 'required|string|max:50',
             'catatan' => 'required|string|max:255',
@@ -120,7 +120,7 @@ class LoanController extends Controller
 
         $nominalPengajuan = $request->nominal_pengajuan;
 
-        if($nominalPengajuan >= 200000000) 
+        if($nominalPengajuan >= 201000000) 
         {
             return back()->with('error', 'Nasabah hanya dapat meminjam maksimal 200 juta');
         }
