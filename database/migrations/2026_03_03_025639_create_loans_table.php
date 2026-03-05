@@ -16,13 +16,10 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained(table: 'users', indexName: 'loans_user_id');
             $table->string('nama');
             $table->string('tipe_pengajuan');
-            // $table->decimal('pendapatan_bulanan_nasabah', 9,0);
-            $table->integer('pendapatan_bulanan_nasabah');
-            // $table->decimal('nominal_pengajuan', 9,0);
-            $table->integer('nominal_pengajuan');
+            $table->decimal('pendapatan_bulanan_nasabah', 9,0);
+            $table->decimal('nominal_pengajuan', 9,0);
             $table->integer('tenor');
-            // $table->decimal('tagihan_nasabah', 9,0);
-            $table->integer('tagihan_nasabah');
+            $table->decimal('tagihan_nasabah', 9,0);
             $table->string('tanggal_pengajuan');
             $table->string('catatan');
             $table->enum('status', ['PENDING', 'APPROVE', 'REJECT']);
