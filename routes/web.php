@@ -14,8 +14,8 @@ Route::post('/registration', [AuthController::class, 'store']);
 
 Route::resource('/user/loan', LoanController::class)->middleware('auth');
 
-Route::patch('/user/loan{loan}/approve', [ActionController::class, 'approve'])->name('loan/approve');
-Route::patch('/user/loan{loan}/reject', [ActionController::class, 'reject'])->name('loan/reject');
+Route::patch('/user/loan{loan}/approve', [ActionController::class, 'approve'])->name('loan/approve')->middleware('auth');
+Route::patch('/user/loan{loan}/reject', [ActionController::class, 'reject'])->name('loan/reject')->middleware('auth');
 
 // Route::patch('/user/{id}/approve', [ActionController::class, 'approve'])->name('loan/approve');
 // Route::patch('/user/{id}/reject', [ActionController::class, 'reject'])->name('loan/reject');
